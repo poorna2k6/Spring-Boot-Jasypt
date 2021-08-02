@@ -1,0 +1,24 @@
+server:
+  port: 10095
+spring:
+  application:
+    name: springboot-pwd-encryption-using-jasypt
+  datasource:
+    driverClassName: org.h2.Driver
+    url: 'jdbc:h2:mem:testdb'
+    username: ENC(/iae6UJmPu81t/FVsb2dRlkqAVJEVEJYrzdeDUH5Ohx+9oAbGJX8x4Xxst0CGXlP)
+    password: ENC(j+BxTJuEcurpYPx8y0JUdxCutGl2VrgWzhxGk/WFcdI/XRXF9rCu/IB13KfKtyIB)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
